@@ -2,7 +2,9 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args) {
+
+
+	public static void main(String[] args) {
 
     	// Déclaration TB
 		int [] scores = new int [7];
@@ -19,9 +21,7 @@ public class Main {
 
 		int moyenne =0;
 		for (int m = 0 ; m< scores.length;m++ ) {
-
 			int s = scores[m];
-
 			moyenne = moyenne + s;
 
 		}
