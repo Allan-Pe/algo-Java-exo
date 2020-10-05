@@ -10,12 +10,12 @@ public class Main {
 		int [] scores = new int [7];
 		//Affectation valeur
 		scores[0] = 22;
-		scores[1] = 17;
+		scores[1] = 1;
 		scores[2] = 44;
-		scores[3] = 66;
+		scores[3] = 70;
 		scores[4] = 12;
-		scores[5] = 11;
-		scores[6] = 21;
+		scores[5] = 15;
+		scores[6] = 22;
 
 
 
