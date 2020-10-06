@@ -98,10 +98,14 @@ public class Main {
 		return index;
 
 	}
-
-
-
-
+	static void countDownRecursive(int start) {
+		if (start > 0) {
+			System.out.println(start + "...");
+			countDownRecursive(start - 1);
+		} else {
+			System.out.println("FINISHED");
+		}
+	}
 	public static void main(String[] args) {
 
     	// Déclaration TB
@@ -120,6 +124,8 @@ public class Main {
 		System.out.println("      ");
 		System.out.println(" C'est "+inf(scores));
 
-		System.out.println(binaire(scores,7));
+		System.out.println("En binaire " + binaire(scores,7));
+
+		countDownRecursive(3); // 3, 2, 1, FINISHED
     }
 }
