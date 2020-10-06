@@ -2,13 +2,13 @@ package com.company;
 
 public class Main {
 
+
 	/**
 	 *Calcul de la moyenne en fonction de []tb
 	 * @param tb intègre les scores du tableau
 	 * @return le calcul moyenne/tb.length
 	 */
-	//Fonction Moyenne
- 	 static int moyenne(int [] tb){
+	public static int moyenne(int [] tb){
 
  	 	int moyenne =0;
  	 	// Pour m < au nombre de score du tb
@@ -28,8 +28,7 @@ public class Main {
 	 * @param tb intègre les scores du tableau
 	 * @return le score le plus élevé
 	 */
-	// Fonction du maximum
-	static int max (int [] tb){
+	public static int max (int [] tb){
  	 	int max = 0;
  	 	//Pour i < au nombre de score du tb
  	 	for (int i=0 ; i < tb.length; i ++){
@@ -46,8 +45,7 @@ public class Main {
 	 * @param tb intègre les scores du tableau
 	 * @return vrai ou faux si un score inf a 10
 	 */
-	//Fonction verification de score < 10
-	static boolean inf (int [] tb){
+	public static boolean inf (int [] tb){
  	 	//Inf = faux
  	 	boolean inf = false;
  	 	//Pour m < au nombre de score du tb
