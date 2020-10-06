@@ -58,26 +58,40 @@ public class Main {
 		return inf;
 	}
 
+	/**
+	 *Doit faire une recherche binaire
+	 * @param tb intègre les scores du tableau
+	 * @param num La recherche voulu
+	 * @return retourne le classement du score dans le tableau
+	 */
 	public static int binaire(int[] tb, int num) {
-		//couper tableau en deux
+
 		int min = 0;
+		//Max = le tableau entier - 1
 		int max = tb.length -1;
 		int index=0;
-
+		//Tant que min inf ou egal a max...
 		while (min <= max){
+			//... la médiane = min+max /2
 			int med =(min + max)/2;
+			//Si le num chercher est inf ou supp
 			if (num < tb[min] || num>tb[max]){
+				//-1 au classement et retourne la valeur
 				index =-1;
 				return index;
 			}
+			//Si la mediane est inf a la recherche
 			if (tb[med] < num ){
 				min = med +1;
 			}
+			//Si la mediane est supp a la recherche
 			else if(tb[med] > num){
 				max = med -1;
 			}
+			//Sinon si la mediane est egal a la recherche
 			else if (tb[med] == num){
 				index = med;
+				//On arrete une fois la recherche trouver
 				break;
 			}
 		}
@@ -106,6 +120,6 @@ public class Main {
 		System.out.println("      ");
 		System.out.println(" C'est "+inf(scores));
 
-		System.out.println(binaire(scores,6));
+		System.out.println(binaire(scores,7));
     }
 }
