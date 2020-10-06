@@ -2,7 +2,16 @@ package com.company;
 
 public class Main {
 
+ 	 static void moyenne(int [] tb){
 
+ 	 	int moyenne =0;
+		 for (int m = 0 ; m< tb.length;m++ ) {
+			 int s = tb [m];
+			 moyenne = moyenne + s;
+
+		 }
+		 System.out.println(moyenne/ tb.length);
+	}
 
 	public static void main(String[] args) {
 
@@ -17,15 +26,9 @@ public class Main {
 		scores[5] = 15;
 		scores[6] = 22;
 
+		moyenne(scores);
+		
 
-
-		int moyenne =0;
-		for (int m = 0 ; m< scores.length;m++ ) {
-			int s = scores[m];
-			moyenne = moyenne + s;
-
-		}
-		System.out.println(moyenne/ scores.length);
 
     }
 }
