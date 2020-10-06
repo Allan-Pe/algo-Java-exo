@@ -8,7 +8,7 @@ public class Main {
 		 for (int m = 0 ; m< tb.length;m++ ) {
 			 int s = tb [m];
 			 moyenne = moyenne + s;
-
+			 System.out.println(s);
 		 }
 		 System.out.println(moyenne/ tb.length);
 	}
@@ -27,7 +27,7 @@ public class Main {
 		scores[6] = 22;
 
 		moyenne(scores);
-		
+
 
 
     }
