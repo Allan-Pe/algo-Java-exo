@@ -21,6 +21,16 @@ public class Main {
 		}
  	 	return max;
 	}
+	static boolean inf (int [] tb){
+ 	 	boolean inf = false;
+ 	 	for(int i = 0; i< tb.length; i++){
+ 	 		if (tb[i] < 10)
+ 	 			inf = true;
+
+		}
+ 	 	return inf;
+	}
+
 
 	public static void main(String[] args) {
 
@@ -35,9 +45,11 @@ public class Main {
 		scores[5] = 15;
 		scores[6] = 22;
 
-		System.out.println((moyenne(scores)));
-		System.out.println(max(scores));
+		System.out.println("La moyenne des scores est de "+(moyenne(scores))+".");
 
-
+		System.out.println("Et le score maximum est de "+max(scores)+".");
+		System.out.println("      ");
+		
+		System.out.println(" C'est "+inf(scores));
     }
 }
