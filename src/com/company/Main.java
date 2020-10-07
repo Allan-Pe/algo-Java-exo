@@ -59,44 +59,39 @@ public class Main {
 	}
 
 	/**
-	 *Doit faire une recherche binaire
-	 * @param tb intègre les scores du tableau
-	 * @param num La recherche voulu
-	 * @return retourne le classement du score dans le tableau
+	 * Search the values inside the sorted array tab.
+	 * @param tab a sorted array
+	 * @param num the number to find
+	 * @return index of the array if found, else -1
 	 */
-	public static int binaire(int[] tb, int num) {
+	static int binaire(int[] tab, int num,int min ,int max) {
 
-		int min = 0;
-		//Max = le tableau entier - 1
-		int max = tb.length -1;
-		int index=0;
-		//Tant que min inf ou egal a max...
-		while (min <= max){
-			//... la médiane = min+max /2
-			int med =(min + max)/2;
-			//Si le num chercher est inf ou supp
-			if (num < tb[min] || num>tb[max]){
-				//-1 au classement et retourne la valeur
-				index =-1;
-				return index;
+
+			int middle = (min + max) / 2;
+			if (max>=min){
+			// J'ai trouver ma valeur a  l'indice middle
+			if (num == tab[middle]) {
+				return middle;
 			}
-			//Si la mediane est inf a la recherche
-			if (tb[med] < num ){
-				min = med +1;
-			}
-			//Si la mediane est supp a la recherche
-			else if(tb[med] > num){
-				max = med -1;
-			}
-			//Sinon si la mediane est egal a la recherche
-			else if (tb[med] == num){
-				index = med;
-				//On arrete une fois la recherche trouver
-				break;
+
+			// Est-ce que num est plus petit que la valeur a l'indice middle
+			else if (num < tab[middle]) {
+				return binaire(tab , num,min , middle-1);
+			} else {
+				return binaire(tab, num, middle + 1, max);
 			}
 		}
-		return index;
+		return -1;
+	}
 
+
+
+
+	static void countDownLoop(int start) {
+		for (int i = start; i > 0; i--) {
+			System.out.println(i + "...");
+		}
+		System.out.println("FINISHED");
 	}
 	static void countDownRecursive(int start) {
 		if (start > 0) {
@@ -106,6 +101,11 @@ public class Main {
 			System.out.println("FINISHED");
 		}
 	}
+
+
+
+
+
 	public static void main(String[] args) {
 
     	// Déclaration TB
@@ -124,8 +124,11 @@ public class Main {
 		System.out.println("      ");
 		System.out.println(" C'est "+inf(scores));
 
-		System.out.println("En binaire " + binaire(scores,7));
-
+		System.out.println("En binaire " + binaire(scores,5,0, scores.length-1));
+		System.out.println("  " );
+		countDownLoop(3); // 3, 2, 1, FINISHED
 		countDownRecursive(3); // 3, 2, 1, FINISHED
+		System.out.println("    ");
+
     }
 }
